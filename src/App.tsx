@@ -2,10 +2,9 @@ import './App.css'
 
 function App() {
 	return (
-		<h3 className='text-3xl underline text-green-800 mx-auto p-40'>
-			Click on the Vite and React logos to learn
-			more
-		</h3>
+		<h1 className='p-3 font-serif text-4xl font-bold text-primary-900 text-center mb-8 animate-fade-in'>
+			Добро пожаловать!
+		</h1>
 	)
 }
 
