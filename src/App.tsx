@@ -1,11 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Layout } from './components/layout'
+import { CatalogPage, InvitationPage, SuccessPage, ErrorPage, NotFoundPage } from './pages'
 import './App.css'
 
 function App() {
-	return (
-		<h1 className='p-3 font-serif text-4xl font-bold text-primary-900 text-center mb-8 animate-fade-in'>
-			Добро пожаловать!
-		</h1>
-	)
+  return (
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<> Main </>} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/invitation/:id" element={<InvitationPage />} />
+          <Route path="/rsvp/success" element={<SuccessPage />} />
+          <Route path="/rsvp/error" element={<ErrorPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Layout>
+    </Router>
+  )
 }
 
 export default App
