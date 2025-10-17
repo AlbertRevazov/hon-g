@@ -22,13 +22,9 @@ export const Breadcrumb: React.FC = () => {
         label: `Приглашение ${paths[1]}`,
       })
     } else if (paths[0] === 'rsvp' && paths[1] === 'success') {
-      breadcrumbs.push({
-        label: 'Успешное подтверждение',
-      })
+      breadcrumbs.push({ label: 'Успешное подтверждение' })
     } else if (paths[0] === 'rsvp' && paths[1] === 'error') {
-      breadcrumbs.push({
-        label: 'Ошибка подтверждения',
-      })
+      breadcrumbs.push({ label: 'Ошибка подтверждения' })
     }
 
     return breadcrumbs
